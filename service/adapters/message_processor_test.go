@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"simplecomputation-service/proto"
+	compute "simplecomputation-service/proto"
 	"simplecomputation-service/service/adapters/mocks"
 	"simplecomputation-service/service/usecases"
 )

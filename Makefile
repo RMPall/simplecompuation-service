@@ -14,7 +14,7 @@ test:
 
 # run
 run:
-	PATH=$(PATH) go run cmd/simplecomputation/main.go
+	PATH=$(PATH) go run cmd/simplecomputation-service/main.go
 
 
 
