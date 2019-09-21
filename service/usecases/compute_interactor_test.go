@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"simplecompuation-service/service/domain"
-	"simplecompuation-service/service/usecases/mocks"
+	"simplecomputation-service/service/domain"
+	"simplecomputation-service/service/usecases/mocks"
 )
 
 func TestNewInteractor_WhenRepoIsNil_ReturnsNilInteractor(t *testing.T) {
