@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package compute;
+
+// The computing service definition.
+service Compute {
+// Add set of inputs
+  rpc Add(Input) returns (ErrorResponse) {}
+
+  // Retrieve results
+  rpc GetResults(Option) returns (Result) {}
+}
+
+// The Input message contains a slice of inputs
+message Input {
+  repeated int64 num = 1;
+}
+
+// The result contains the computed result
+message Result {
+  int64 total = 1;
+}
+
+// The error response contains status, code and message of the error
+message ErrorResponse {
+   int64 status = 1;
+   int64 code = 2;
+   string message = 3;
+}
+
+// Empty message placeholder for options
+message Option {}
