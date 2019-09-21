@@ -1,7 +1,7 @@
 package usecases
 
 import (
-	"simplecompuation-service/service/domain"
+	"simplecomputation-service/service/domain"
 )
 
 // Interactor consists of repository to save the compuation
