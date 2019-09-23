@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simplecompuation-service-app
+  labels:
+    k8s-app: simplecompuation-service-app
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: simplecompuation-service-app
+    spec:
+      containers:
+        - name: simplecompuation-service-app
+          image: quay.io/kubernetes-ingress-controller/grpc-simplecompuation-service:0.1
+          ports:
+            - containerPort: 50051
+              name: grpc
