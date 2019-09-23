@@ -24,6 +24,10 @@ A deployment folder is there which has ann ingress, deployement and service ymls
 
 ```make run``` to run the grpc server.
 
+### GRPC client
+
+ ```make run-client``` to run the client
+
 ## Run the code
 
   make run

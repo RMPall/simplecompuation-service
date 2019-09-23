@@ -17,6 +17,11 @@ run:
 	PATH=$(PATH) go run cmd/simplecomputation-service/main.go
 
 
+# run client
+run-client:
+	PATH=$(PATH) go run client/client.go
+
+
 
 
 
