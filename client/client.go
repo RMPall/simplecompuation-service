@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 
 	"google.golang.org/grpc"
 	pb "simplecomputation-service/proto"
@@ -23,14 +24,11 @@ func main() {
 	client := pb.NewComputeClient(conn)
 	inputs := &pb.Input{Num: []int64{1, 2, 3, 4, 5}}
 	ctx := context.Background()
-	resp, err := client.Add(ctx, inputs)
+	_, err = client.Add(ctx, inputs)
 	if err != nil {
 		fmt.Println(err)
-		fmt.Println(resp)
+		os.Exit(1)
 	}
-
-	fmt.Println(err)
-	fmt.Println(resp)
 
 	results, err := client.GetResults(ctx, &pb.Option{})
 	if err != nil {
