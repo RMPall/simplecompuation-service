@@ -1,23 +1,35 @@
-## Go Simple Computation Microservice
+## GRPC server
+
+```make run``` to run the grpc server.
+
+# Go Simple Computation Microservice
 
 This microservice takes a set of inputs and computes (adds) them. There are 2 grpc paths one that calls add interface to add the inputs and another
 to get the results.
-
 
 ## CI/CD Aware
 
 A makefile is created with taks to run the grpc server, test the service and run linter. A sample circleci spec is also given as a basic
 struture
 
-## TDD Aware
+### TDD Aware
 
 Tests are added in the usecases and adapters layer and a Test driven approach is followed.
 
-## Deployment configuration
+### Deployment configuration
 
 A deployment folder is there which has ann ingress, deployement and service ymls to show a basic kubectl templates.
 
-
-## GRPC server
+### GRPC server
 
 ```make run``` to run the grpc server.
+
+## Run the code
+
+  make run
+
+## Test the code
+  make test
+
+## Run Linter
+  make lint
