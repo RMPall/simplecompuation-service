@@ -16,6 +16,7 @@ const (
 )
 
 func main() {
+	//A simple space to test the github config
 	repo := &infrastructure.Repo{}
 	interactor := usecases.NewInteractor(repo)
 	processor := adapters.NewProcessor(interactor)
